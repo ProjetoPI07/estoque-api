@@ -5,17 +5,19 @@ public class PecaResponseDTO {
     private String nome;
     private Double valor;
     private String descricao;
+    private String categoria;
     private Integer limiteEstoque;
     private Boolean itemAtivo;
 
     public PecaResponseDTO() {
     }
 
-    public PecaResponseDTO(Integer id, String nome, Double valor, String descricao, Integer limiteEstoque, Boolean itemAtivo) {
+    public PecaResponseDTO(Integer id, String nome, Double valor, String descricao, String categoria, Integer limiteEstoque, Boolean itemAtivo) {
         this.id = id;
         this.nome = nome;
         this.valor = valor;
         this.descricao = descricao;
+        this.categoria = categoria;
         this.limiteEstoque = limiteEstoque;
         this.itemAtivo = itemAtivo;
     }
@@ -50,6 +52,14 @@ public class PecaResponseDTO {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public Integer getLimiteEstoque() {
