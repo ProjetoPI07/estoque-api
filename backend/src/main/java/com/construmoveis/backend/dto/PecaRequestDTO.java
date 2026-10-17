@@ -1,3 +1,4 @@
+
 package com.construmoveis.backend.dto;
 
 import jakarta.validation.constraints.*;
@@ -16,6 +17,10 @@ public class PecaRequestDTO {
     @Size(max = 500)
     private String descricao;
 
+    @NotBlank
+    @Size(min = 2, max = 100)
+    private String categoria;
+
     @NotNull
     @Min(0)
     private Integer limiteEstoque;
@@ -26,10 +31,18 @@ public class PecaRequestDTO {
     public PecaRequestDTO() {
     }
 
-    public PecaRequestDTO(String nome, Double valor, String descricao, Integer limiteEstoque, Boolean itemAtivo) {
+    public PecaRequestDTO(
+            String nome,
+            Double valor,
+            String descricao,
+            String categoria,
+            Integer limiteEstoque,
+            Boolean itemAtivo
+    ) {
         this.nome = nome;
         this.valor = valor;
         this.descricao = descricao;
+        this.categoria = categoria;
         this.limiteEstoque = limiteEstoque;
         this.itemAtivo = itemAtivo;
     }
@@ -56,6 +69,14 @@ public class PecaRequestDTO {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public Integer getLimiteEstoque() {

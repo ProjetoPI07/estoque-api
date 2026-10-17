@@ -42,4 +42,24 @@ public class PecaController {
         return ResponseEntity.status(201).body(PecaMapper.toResponse(pecaSalva));
     }
 
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PecaResponseDTO> atualizar(
+            @PathVariable Integer id,
+            @Valid @RequestBody PecaRequestDTO dto
+    ) {
+        Peca pecaAtualizada = PecaMapper.toEntity(dto);
+
+        Peca pecaSalva = pecaService.atualizarPeca(id, pecaAtualizada);
+
+        return ResponseEntity.ok(PecaMapper.toResponse(pecaSalva));
+    }
+
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Integer id) {
+        pecaService.excluirPeca(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
