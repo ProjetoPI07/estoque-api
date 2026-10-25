@@ -1,42 +1,57 @@
-package com.construmoveis.backend.dto;
+
+package com.construmoveis.backend.dto.peca;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.*;
 
-public class PecaResponseDTO {
-    @Schema(description = "Identificador da peça", example = "1")
-    private Integer id;
+public class PecaRequestDTO {
+
+    @NotBlank
+    @Size(min = 2, max = 100)
     @Schema(description = "Nome da peça", example = "Brocas de metal")
     private String nome;
+
+    @NotNull
+    @DecimalMin(value = "0.0", inclusive = true)
     @Schema(description = "Valor da peça", example = "10.00")
     private Double valor;
+
+    @NotBlank
+    @Size(max = 500)
     @Schema(description = "Descrição da peça", example = "Brocas afiadas de metal")
     private String descricao;
+
+    @NotBlank
+    @Size(min = 2, max = 100)
     @Schema(description = "Categoria da peça", example = "Brocas")
     private String categoria;
+
+    @NotNull
+    @Min(0)
     @Schema(description = "Limite do estoque", example = "10")
     private Integer limiteEstoque;
+
+    @NotNull
     @Schema(description = "Identificação se o item está ativo ou não", example = "True/False")
     private Boolean itemAtivo;
 
-    public PecaResponseDTO() {
+    public PecaRequestDTO() {
     }
 
-    public PecaResponseDTO(Integer id, String nome, Double valor, String descricao, String categoria, Integer limiteEstoque, Boolean itemAtivo) {
-        this.id = id;
+    public PecaRequestDTO(
+            String nome,
+            Double valor,
+            String descricao,
+            String categoria,
+            Integer limiteEstoque,
+            Boolean itemAtivo
+    ) {
         this.nome = nome;
         this.valor = valor;
         this.descricao = descricao;
         this.categoria = categoria;
         this.limiteEstoque = limiteEstoque;
         this.itemAtivo = itemAtivo;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNome() {
