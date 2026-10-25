@@ -1,4 +1,4 @@
-package com.construmoveis.backend.dto;
+package com.construmoveis.backend.dto.estoque;
 
 public class EstoqueResponseDTO {
 
