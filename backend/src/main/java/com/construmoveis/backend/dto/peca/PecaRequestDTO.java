@@ -1,5 +1,5 @@
 
-package com.construmoveis.backend.dto;
+package com.construmoveis.backend.dto.peca;
 
 import jakarta.validation.constraints.*;
 

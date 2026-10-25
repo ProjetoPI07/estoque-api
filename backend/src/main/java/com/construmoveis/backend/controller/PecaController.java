@@ -1,7 +1,7 @@
 package com.construmoveis.backend.controller;
 
-import com.construmoveis.backend.dto.PecaRequestDTO;
-import com.construmoveis.backend.dto.PecaResponseDTO;
+import com.construmoveis.backend.dto.peca.PecaRequestDTO;
+import com.construmoveis.backend.dto.peca.PecaResponseDTO;
 import com.construmoveis.backend.entity.Peca;
 import com.construmoveis.backend.mapper.PecaMapper;
 import com.construmoveis.backend.repository.PecaRepository;

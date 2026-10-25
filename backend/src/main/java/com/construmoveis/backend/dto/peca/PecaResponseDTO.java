@@ -1,4 +1,4 @@
-package com.construmoveis.backend.dto;
+package com.construmoveis.backend.dto.peca;
 
 public class PecaResponseDTO {
     private Integer id;
