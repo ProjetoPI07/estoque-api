@@ -1,12 +1,21 @@
 package com.construmoveis.backend.dto.peca;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class PecaResponseDTO {
+    @Schema(description = "Identificador da peça", example = "1")
     private Integer id;
+    @Schema(description = "Nome da peça", example = "Brocas de metal")
     private String nome;
+    @Schema(description = "Valor da peça", example = "10.00")
     private Double valor;
+    @Schema(description = "Descrição da peça", example = "Brocas afiadas de metal")
     private String descricao;
+    @Schema(description = "Categoria da peça", example = "Brocas")
     private String categoria;
+    @Schema(description = "Limite do estoque", example = "10")
     private Integer limiteEstoque;
+    @Schema(description = "Identificação se o item está ativo ou não", example = "True/False")
     private Boolean itemAtivo;
 
     public PecaResponseDTO() {

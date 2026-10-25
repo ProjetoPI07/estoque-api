@@ -1,7 +1,8 @@
 package com.construmoveis.backend.dto.estoque;
 
-public class EstoqueResponseDTO {
+import io.swagger.v3.oas.annotations.media.Schema;
 
+public class EstoqueResponseDTO {
     private Integer id;
     private Integer idPeca;
     private Integer quantidade;
