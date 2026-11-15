@@ -29,9 +29,9 @@ public class PecaController {
 
     public PecaController(PecaService pecaService, PecaRepository pecaRepository) {
         this.pecaService = pecaService;
-
         this.pecaRepository = pecaRepository;
     }
+
 
     @Operation(
             summary = "Lista todas as peças",
