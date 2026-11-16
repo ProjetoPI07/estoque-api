@@ -1,8 +1,8 @@
 
 package com.construmoveis.backend.mapper;
 
-import com.construmoveis.backend.dto.PecaRequestDTO;
-import com.construmoveis.backend.dto.PecaResponseDTO;
+import com.construmoveis.backend.dto.peca.PecaRequestDTO;
+import com.construmoveis.backend.dto.peca.PecaResponseDTO;
 import com.construmoveis.backend.entity.Peca;
 
 import java.util.ArrayList;

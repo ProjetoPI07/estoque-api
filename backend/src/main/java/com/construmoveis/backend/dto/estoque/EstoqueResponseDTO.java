@@ -1,4 +1,4 @@
-package com.construmoveis.backend.dto;
+package com.construmoveis.backend.dto.estoque;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

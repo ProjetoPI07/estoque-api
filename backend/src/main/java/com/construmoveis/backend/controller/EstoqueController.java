@@ -1,7 +1,7 @@
 package com.construmoveis.backend.controller;
 
-import com.construmoveis.backend.dto.EstoqueRequestDTO;
-import com.construmoveis.backend.dto.EstoqueResponseDTO;
+import com.construmoveis.backend.dto.estoque.EstoqueRequestDTO;
+import com.construmoveis.backend.dto.estoque.EstoqueResponseDTO;
 import com.construmoveis.backend.entity.Estoque;
 import com.construmoveis.backend.mapper.EstoqueMapper;
 import com.construmoveis.backend.service.EstoqueService;

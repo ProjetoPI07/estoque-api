@@ -1,6 +1,6 @@
 package com.construmoveis.backend.mapper;
 
-import com.construmoveis.backend.dto.EstoqueResponseDTO;
+import com.construmoveis.backend.dto.estoque.EstoqueResponseDTO;
 import com.construmoveis.backend.entity.Estoque;
 
 public class EstoqueMapper {
