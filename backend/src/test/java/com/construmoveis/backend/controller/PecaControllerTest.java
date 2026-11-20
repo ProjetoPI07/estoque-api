@@ -142,9 +142,9 @@ class PecaControllerTest {
     @Test
     @DisplayName("Deve retornar status 204 quando a peça for excluída com sucesso")
     void deveRetornar204QuandoExcluidoComSucesse(){
-        Peca peca = new Peca(1,"Nome", 20.0, "Descriçao", "Categoria", 20, true);
+        Peca peca = new Peca(1000000000,"Nome", 20.0, "Descriçao", "Categoria", 20, true);
 
-        ResponseEntity<?> resposta = pecaController.excluir(1);
+        ResponseEntity<?> resposta = pecaController.excluir(1000000000);
 
         Assertions.assertEquals(HttpStatus.NO_CONTENT, resposta.getStatusCode());
     }
