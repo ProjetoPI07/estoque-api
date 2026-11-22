@@ -16,7 +16,7 @@ public class Cliente {
     private String email;
     private String telefone;
 
-    public Cliente(Integer id, String nome, String email, String telefone) {
+    public Cliente() {
         this.id = id;
         this.nome = nome;
         this.email = email;

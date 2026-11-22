@@ -23,9 +23,6 @@ public class ClienteRequestDTO {
     @NotBlank(message = "O telefone é obrigatório")
     private String telefone;
 
-    public ClienteRequestDTO() {
-    }
-
     public ClienteRequestDTO(String nome, String email, String telefone) {
         this.nome = nome;
         this.email = email;
