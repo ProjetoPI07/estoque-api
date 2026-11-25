@@ -4,6 +4,9 @@ import com.construmoveis.backend.dto.cliente.ClienteRequestDTO;
 import com.construmoveis.backend.dto.cliente.ClienteResponseDTO;
 import com.construmoveis.backend.entity.Cliente;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ClienteMapper {
 
     public static Cliente toEntity(ClienteRequestDTO dto) {
@@ -24,12 +27,25 @@ public class ClienteMapper {
             return null;
         }
 
-        ClienteResponseDTO clienteResponseDTO = new ClienteResponseDTO();
-        clienteResponseDTO.setId(entity.getId());
-        clienteResponseDTO.setNome(entity.getNome());
-        clienteResponseDTO.setEmail(entity.getEmail());
-        clienteResponseDTO.setTelefone(entity.getTelefone());
+        ClienteResponseDTO dto = new ClienteResponseDTO();
+        dto.setId(entity.getId());
+        dto.setNome(entity.getNome());
+        dto.setEmail(entity.getEmail());
+        dto.setTelefone(entity.getTelefone());
 
-        return clienteResponseDTO;
+        return dto;
+    }
+
+    public static List<ClienteResponseDTO> toResponseDtoList(List<Cliente> entities) {
+        if (entities == null) {
+            return null;
+        }
+
+        List<ClienteResponseDTO> lista = new ArrayList<>();
+        for (Cliente entity : entities) {
+            lista.add(toResponseDto(entity));
+        }
+
+        return lista;
     }
 }
