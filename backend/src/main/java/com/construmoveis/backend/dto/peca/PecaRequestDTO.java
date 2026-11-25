@@ -6,6 +6,7 @@ import jakarta.validation.constraints.*;
 
 public class PecaRequestDTO {
 
+    @NotNull
     @NotBlank
     @Size(min = 2, max = 100)
     @Schema(description = "Nome da peça", example = "Brocas de metal")
@@ -16,11 +17,13 @@ public class PecaRequestDTO {
     @Schema(description = "Valor da peça", example = "10.00")
     private Double valor;
 
+    @NotNull
     @NotBlank
     @Size(max = 500)
     @Schema(description = "Descrição da peça", example = "Brocas afiadas de metal")
     private String descricao;
-
+    
+    @NotNull
     @NotBlank
     @Size(min = 2, max = 100)
     @Schema(description = "Categoria da peça", example = "Brocas")
