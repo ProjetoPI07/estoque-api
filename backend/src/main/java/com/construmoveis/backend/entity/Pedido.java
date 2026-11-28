@@ -10,7 +10,7 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private LocalDateTime dataPedido;
 
@@ -26,11 +26,11 @@ public class Pedido {
     @JoinColumn(name = "fk_idFuncionario")
     private Funcionario funcionario;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
