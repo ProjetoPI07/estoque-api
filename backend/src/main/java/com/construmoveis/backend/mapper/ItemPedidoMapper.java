@@ -40,7 +40,7 @@ public class ItemPedidoMapper {
             response.setValorUnitario(itemPedido.getValorUnitario());
 
             if (itemPedido.getPedido() != null) {
-                response.setIdPedido(itemPedido.getPedido().getId());
+                response.setIdPedido(Math.toIntExact(itemPedido.getPedido().getId()));
             }
 
             if (itemPedido.getPeca() != null) {

@@ -30,13 +30,13 @@ public class PedidoMapper {
 
         PedidoResponse response = new PedidoResponse();
 
-        response.setId(pedido.getId());
+        response.setId(Math.toIntExact(pedido.getId()));
         response.setDataPedido(pedido.getDataPedido());
         response.setDesconto(pedido.getDesconto());
         response.setValorTotal(pedido.getValorTotal());
 
         if (pedido.getCliente() != null) {
-            response.setIdCliente(pedido.getCliente().getId());
+            response.setIdCliente(Math.toIntExact(pedido.getCliente().getId()));
         }
 
         if (pedido.getFuncionario() != null) {

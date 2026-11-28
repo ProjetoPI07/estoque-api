@@ -60,7 +60,7 @@ public class PedidoController {
     public ResponseEntity<PedidoResponse> cadastrar(
 
             @Parameter(description = "Identificador do cliente", example = "1")
-            @RequestParam Integer idCliente,
+            @RequestParam Long idCliente,
 
             @Parameter(description = "Identificador do funcionário", example = "2")
             @RequestParam Integer idFuncionario,
@@ -111,7 +111,7 @@ public class PedidoController {
             @PathVariable Integer id,
 
             @Parameter(description = "Identificador do cliente", example = "1")
-            @RequestParam Integer idCliente,
+            @RequestParam Long idCliente,
 
             @Parameter(description = "Identificador do funcionário", example = "2")
             @RequestParam Integer idFuncionario,

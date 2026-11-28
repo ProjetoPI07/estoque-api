@@ -10,7 +10,7 @@ import com.construmoveis.backend.entity.Funcionario;
 import com.construmoveis.backend.exception.FuncionarioNaoExiste;
 import com.construmoveis.backend.exception.PedidoNaoExisteException;
 import com.construmoveis.backend.exception.ClienteNaoExisteException;
-import com.construmoveis.backend.exception.FuncionarioNaoExisteException;
+
 
 import com.construmoveis.backend.mapper.PedidoMapper;
 
@@ -46,7 +46,7 @@ public class PedidoService {
     @Transactional
     public PedidoResponse cadastrar(
             PedidoRequest dto,
-            Integer idCliente,
+            Long idCliente,
             Integer idFuncionario
     ) {
 
@@ -63,7 +63,7 @@ public class PedidoService {
                 funcionarioRepository.findById(idFuncionario);
 
         if (funcionarioOptional.isEmpty()) {
-            throw new FuncionarioNaoExisteException();
+            throw new FuncionarioNaoExiste();
         }
 
         Funcionario funcionario = funcionarioOptional.get();
@@ -100,7 +100,7 @@ public class PedidoService {
     public PedidoResponse atualizar(
             Integer id,
             PedidoRequest dto,
-            Integer idCliente,
+            Long idCliente,
             Integer idFuncionario
     ) {
 

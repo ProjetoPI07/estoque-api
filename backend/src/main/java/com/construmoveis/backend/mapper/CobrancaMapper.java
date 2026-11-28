@@ -17,7 +17,7 @@ public class CobrancaMapper {
 
         return new CobrancaResponseDTO(
                 entity.getId(),
-                entity.getPedido().getId(),
+                Math.toIntExact(entity.getPedido().getId()),
                 entity.getValorTotal(),
                 entity.getStatusCobranca()
         );
